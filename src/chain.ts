@@ -38,7 +38,7 @@ export function buildQAChain(
 }
 
 /**
- * Internal function to build the actual chain
+ * Internal function to build the actual chain with necessary artifacts
  */
 function buildChainInternal(
   model: BaseChatModel,
