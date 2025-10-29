@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Document Search</h1>
+        </header>
+        
+        <main>
+            <div class="upload-section">
+                <div class="file-upload-container">
+                    <label for="file-upload" class="custom-file-upload">
+                        <span class="upload-icon">📁</span>
+                        <span>Choose Files</span>
+                    </label>
+                    <input type="file" id="file-upload" multiple accept=".pdf,.docx,.txt,.csv,.pptx,.xlsx">
+                    <div id="file-list" class="file-list"></div>
+                </div>
+                <div class="upload-info">
+                    <p>Supported formats: PDF, DOCX, TXT, CSV, PPTX, XLSX</p>
+                    <p>Max file size: 5MB</p>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <textarea id="question" 
+                    placeholder="Enter your question here (max 1000 characters)"
+                    maxlength="1000"></textarea>
+                <div class="char-count">0 / 1000</div>
+            </div>
+
+            <button id="search-btn" class="search-button" disabled>Search Documents</button>
+
+            <div class="results-section">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Processing your request...</p>
+                </div>
+                <div id="error" class="error hidden"></div>
+                <div id="results" class="results hidden"></div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
